@@ -1,0 +1,30 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "cmake build",
+            "type": "shell",
+            "windows": {
+                "command": "cmd",
+                "args": [
+                    "/C",
+                    "if not exist build mkdir build && cd build && cmake -DCMAKE_BUILD_TYPE=RelWithDebInfo .. && cmake --build . --config RelWithDebInfo  --target mnist-eval -j 8"
+                ]
+            },
+            "linux": {
+                "command": "bash",
+                "args": [
+                    "-c",
+                    "mkdir -p build && cd build && cmake .. && cmake --build . --config Debug --target mnist-eval -j 8"
+                ]
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$msCompile"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,22 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug mnist-eval",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/bin/RelWithDebInfo/mnist-eval",
+            "args": [
+                "${workspaceFolder}/examples/mnist/mnist-fc-f32.gguf",
+                "${workspaceFolder}/examples/mnist/data/MNIST/raw/t10k-images-idx3-ubyte",
+                "${workspaceFolder}/examples/mnist/data/MNIST/raw/t10k-labels-idx1-ubyte"
+            ],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "console": "integratedTerminal",
+            "preLaunchTask": "cmake build"
+        }
+    ]
+}
