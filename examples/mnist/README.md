@@ -107,7 +107,7 @@ GGUF model saved to 'mnist-cnn-f32.gguf'
 The saved model can be evaluated on the CPU using the `mnist-eval` binary:
 
 ```bash
-$ ../../build/bin/mnist-eval mnist-fc-f32.gguf data/MNIST/raw/t10k-images-idx3-ubyte data/MNIST/raw/t10k-labels-idx1-ubyte
+$ ../../build/bin/Debug/mnist-eval.exe mnist-fc-f32.gguf data/MNIST/raw/t10k-images-idx3-ubyte data/MNIST/raw/t10k-labels-idx1-ubyte
 
 ________________________________________________________
 ________________________________________________________
