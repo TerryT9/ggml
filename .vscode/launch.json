@@ -5,7 +5,7 @@
             "name": "Debug mnist-eval",
             "type": "cppvsdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/build/bin/RelWithDebInfo/mnist-eval",
+            "program": "${workspaceFolder}/build/bin/RelWithDebInfo/mnist-eval.exe",
             "args": [
                 "${workspaceFolder}/examples/mnist/mnist-fc-f32.gguf",
                 "${workspaceFolder}/examples/mnist/data/MNIST/raw/t10k-images-idx3-ubyte",
@@ -17,6 +17,23 @@
             "externalConsole": false,
             "console": "integratedTerminal",
             "preLaunchTask": "cmake build"
+        },
+        {
+            "name": "Debug mnist-eval (Rebuild)",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/bin/RelWithDebInfo/mnist-eval.exe",
+            "args": [
+                "${workspaceFolder}/examples/mnist/mnist-fc-f32.gguf",
+                "${workspaceFolder}/examples/mnist/data/MNIST/raw/t10k-images-idx3-ubyte",
+                "${workspaceFolder}/examples/mnist/data/MNIST/raw/t10k-labels-idx1-ubyte"
+            ],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "console": "integratedTerminal",
+            "preLaunchTask": "rebuild"
         }
     ]
 }

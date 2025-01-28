@@ -26,7 +26,8 @@ int main(int argc, char ** argv) {
         fprintf(stderr, "Usage: %s mnist-fc-f32.gguf data/MNIST/raw/t10k-images-idx3-ubyte data/MNIST/raw/t10k-labels-idx1-ubyte [CPU/CUDA0]\n", argv[0]);
         exit(1);
     }
-    
+
+    fprintf(stdout, "Step 2: Initializing dataset...\n");
     fprintf(stdout, "Step 2: Initializing dataset...\n");
     ggml_opt_dataset_t dataset = ggml_opt_dataset_init(MNIST_NINPUT, MNIST_NCLASSES, MNIST_NTEST, MNIST_NBATCH_PHYSICAL);
 
